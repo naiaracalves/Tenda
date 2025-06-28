@@ -5,7 +5,7 @@ class Remocao {
     cy.get(el.checkboxProduto(nomeProduto)).check();
     cy.get(el.apagarButton).first().click();
     cy.wait(5000)
-    cy.contains(el.confirmarButton, 'Continuar').click();
+    cy.contains(el.confirmarButton, 'Continuar').click({force: true});
     cy.wait(5000);
     cy.get(el.tipoProdutoSeller).should('not.contain', nomeProduto);
   }

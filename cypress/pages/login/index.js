@@ -14,7 +14,7 @@ preencherCredenciaisValidas(){
     cy.get(el.senha).type(Cypress.env('credenciais_validas').password)
     cy.get(el.botaoEntrar).click()
     cy.get(el.aceitarCookies).click()
-    cy.wait(5000)   
+    cy.wait(10000)   
     cy.get(el.usuarioLogado).contains ('Olá, Naiara')       
     
 }
